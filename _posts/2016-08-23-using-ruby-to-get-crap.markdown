@@ -29,7 +29,7 @@ We are able to easily check the item and percent remaining by opening the Woot! 
 
 We can find the item name and percent remaining by searching for the fn and percent-remaining classes. [Here is the link to the final code I used](https://github.com/DrSayre/woot) (feel free to hack on it if you want). When the page opens, you need to add it to the cart and checkout. Here is a screen shot of the output from the script:
 
-![output]({{ site.url }}/assets/woot_code.jpg)
+![output]({{ site.url }}/assets/woot_code.jpeg)
 
 ## Problems
 
