@@ -16,9 +16,10 @@
 title: Caleb Sayre
 email: DrSayre2002@yahoo.com
 description: > # this means to ignore newlines until "baseurl:"
-  Welcome to my website! I am not entirely sure what this will end up being,
-  but I suppect it will be a collection of "blogs" of things that I consider
-  neat, interesting, and/or cool.
+  A website that will feature neat, interesting, and/or cool things
+  as determined by me.  Posts will feature (but not limited to)
+  Tutorial on Web Frameworks and other technologies, TV Shows, and reviews of that crazy fast food item
+  you just saw a commercial for.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://calebsayre.xyz" # the base hostname & protocol for your site
 twitter_username: DrSayre
