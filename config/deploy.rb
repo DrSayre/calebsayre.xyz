@@ -2,13 +2,13 @@
 lock '3.6.0'
 
 set :application, 'calebsayre.xyz'
-set :repo_url, "git@github.com:drsayre/#{fetch(:application)}.git"
+set :repo_url, "git@github.com:DrSayre/#{fetch(:application)}.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/#{fetch(:application)}"
+set :deploy_to, "/home/deploy/apps/#{fetch(:application)}"
 
 # Default value for :scm is :git
 set :scm, :git
