@@ -1,0 +1,345 @@
+# Logfile created on 2016-08-22 22:40:23 -0400 by logger.rb/53141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-22 22:40:23 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c825131a] Running ~/.rvm/bin/rvm version as deploy@192.241.190.158
+ DEBUG [c825131a] Command: ~/.rvm/bin/rvm version
+ DEBUG [c825131a] 	rvm 1.27.0 (master) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [c825131a] Finished in 1.618 seconds with exit status 0 (successful).
+ DEBUG [7c301a3c] Running ~/.rvm/bin/rvm current as deploy@192.241.190.158
+ DEBUG [7c301a3c] Command: ~/.rvm/bin/rvm current
+ DEBUG [7c301a3c] 	ruby-2.3.0
+ DEBUG [7c301a3c] Finished in 1.535 seconds with exit status 0 (successful).
+ DEBUG [6e1220f0] Running ~/.rvm/bin/rvm default do ruby --version as deploy@192.241.190.158
+ DEBUG [6e1220f0] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [6e1220f0] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [6e1220f0] Finished in 1.126 seconds with exit status 0 (successful).
+  INFO [b1aeeafa] Running /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/rvm1scripts/ as deploy@192.241.190.158
+ DEBUG [b1aeeafa] Command: /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/rvm1scripts/
+  INFO [b1aeeafa] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/calebsayre/.rvm/gems/ruby-2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/calebsayre/.rvm/gems/ruby-2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [572aab76] Running /usr/bin/env chmod +x /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh as deploy@192.241.190.158
+ DEBUG [572aab76] Command: /usr/bin/env chmod +x /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh
+  INFO [572aab76] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [f87bdb03] Running /usr/bin/env mkdir -p /tmp as deploy@192.241.190.158
+ DEBUG [f87bdb03] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f87bdb03] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh 0.0%
+  INFO Uploading /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh 100.0%
+  INFO [292a5c09] Running /usr/bin/env chmod 700 /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh as deploy@192.241.190.158
+ DEBUG [292a5c09] Command: /usr/bin/env chmod 700 /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh
+  INFO [292a5c09] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [64b65237] Running /usr/bin/env git ls-remote --heads git@github.com:drsayre/calebsayre.xyz.git as deploy@192.241.190.158
+ DEBUG [64b65237] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git ls-remote --heads git@github.com:drsayre/calebsayre.xyz.git )
+ DEBUG [64b65237] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [64b65237] 	3ed97afd59a3d39b418fb62f04a67ff3f5508d6f	refs/heads/master
+  INFO [64b65237] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO [4d5216ee] Running /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/shared /home/deploy/calebsayre.xyz/releases as deploy@192.241.190.158
+ DEBUG [4d5216ee] Command: /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/shared /home/deploy/calebsayre.xyz/releases
+  INFO [4d5216ee] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [b6bad53f] Running [ -f /home/deploy/calebsayre.xyz/current/REVISION ] as deploy@192.241.190.158
+ DEBUG [b6bad53f] Command: [ -f /home/deploy/calebsayre.xyz/current/REVISION ]
+ DEBUG [b6bad53f] Finished in 0.102 seconds with exit status 1 (failed).
+ DEBUG [98a58724] Running [ -f /home/deploy/calebsayre.xyz/repo/HEAD ] as deploy@192.241.190.158
+ DEBUG [98a58724] Command: [ -f /home/deploy/calebsayre.xyz/repo/HEAD ]
+ DEBUG [98a58724] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [7da048c7] Running if test ! -d /home/deploy/calebsayre.xyz; then echo "Directory does not exist '/home/deploy/calebsayre.xyz'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [7da048c7] Command: if test ! -d /home/deploy/calebsayre.xyz; then echo "Directory does not exist '/home/deploy/calebsayre.xyz'" 1>&2; false; fi
+ DEBUG [7da048c7] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [71d165c8] Running /usr/bin/env git clone --mirror git@github.com:drsayre/calebsayre.xyz.git /home/deploy/calebsayre.xyz/repo as deploy@192.241.190.158
+ DEBUG [71d165c8] Command: cd /home/deploy/calebsayre.xyz && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git clone --mirror git@github.com:drsayre/calebsayre.xyz.git /home/deploy/calebsayre.xyz/repo )
+ DEBUG [71d165c8] 	Cloning into bare repository '/home/deploy/calebsayre.xyz/repo'...
+  INFO [71d165c8] Finished in 0.473 seconds with exit status 0 (successful).
+ DEBUG [0a490e03] Running if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [0a490e03] Command: if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [0a490e03] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [96a95a16] Running /usr/bin/env git remote update --prune as deploy@192.241.190.158
+ DEBUG [96a95a16] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [96a95a16] 	Fetching origin
+  INFO [96a95a16] Finished in 0.404 seconds with exit status 0 (successful).
+ DEBUG [4e5b25fa] Running if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [4e5b25fa] Command: if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [4e5b25fa] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [c7456a24] Running /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/releases/20160823024029 as deploy@192.241.190.158
+ DEBUG [c7456a24] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/releases/20160823024029 )
+  INFO [c7456a24] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [b37ab566] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/calebsayre.xyz/releases/20160823024029 as deploy@192.241.190.158
+ DEBUG [b37ab566] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/calebsayre.xyz/releases/20160823024029 )
+  INFO [b37ab566] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [8d33a364] Running if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [8d33a364] Command: if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [8d33a364] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [45de6588] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.241.190.158
+ DEBUG [45de6588] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [45de6588] 	3ed97afd59a3d39b418fb62f04a67ff3f5508d6f
+ DEBUG [45de6588] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [b6e22ca1] Running if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024029; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024029'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [b6e22ca1] Command: if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024029; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024029'" 1>&2; false; fi
+ DEBUG [b6e22ca1] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [fa0e8670] Running /usr/bin/env echo "3ed97afd59a3d39b418fb62f04a67ff3f5508d6f" >> REVISION as deploy@192.241.190.158
+ DEBUG [fa0e8670] Command: cd /home/deploy/calebsayre.xyz/releases/20160823024029 && /usr/bin/env echo "3ed97afd59a3d39b418fb62f04a67ff3f5508d6f" >> REVISION
+  INFO [fa0e8670] Finished in 0.111 seconds with exit status 0 (successful).
+ DEBUG [a959736a] Running if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024029; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024029'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [a959736a] Command: if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024029; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024029'" 1>&2; false; fi
+ DEBUG [a959736a] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [3511c5ca] Running /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh . ~/.rvm/bin/rvm default do bundle install --path /home/deploy/calebsayre.xyz/shared/bundle --without development test --deployment --quiet as deploy@192.241.190.158
+ DEBUG [3511c5ca] Command: cd /home/deploy/calebsayre.xyz/releases/20160823024029 && /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh . ~/.rvm/bin/rvm default do bundle install --path /home/deploy/calebsayre.xyz/shared/bundle --without development test --deployment --quiet
+  INFO [3511c5ca] Finished in 39.769 seconds with exit status 0 (successful).
+  INFO [5740c30a] Running /usr/bin/env ln -s /home/deploy/calebsayre.xyz/releases/20160823024029 /home/deploy/calebsayre.xyz/releases/current as deploy@192.241.190.158
+ DEBUG [5740c30a] Command: /usr/bin/env ln -s /home/deploy/calebsayre.xyz/releases/20160823024029 /home/deploy/calebsayre.xyz/releases/current
+  INFO [5740c30a] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [d53fec30] Running /usr/bin/env mv /home/deploy/calebsayre.xyz/releases/current /home/deploy/calebsayre.xyz as deploy@192.241.190.158
+ DEBUG [d53fec30] Command: /usr/bin/env mv /home/deploy/calebsayre.xyz/releases/current /home/deploy/calebsayre.xyz
+  INFO [d53fec30] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [e44e94ec] Running if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024029; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024029'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [e44e94ec] Command: if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024029; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024029'" 1>&2; false; fi
+ DEBUG [e44e94ec] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [985a0349] Running /usr/bin/env /home/deploy/.rvm/gems/ruby-2.3.0/wrappers/jekyll build --destination public as deploy@192.241.190.158
+ DEBUG [985a0349] Command: cd /home/deploy/calebsayre.xyz/releases/20160823024029 && /usr/bin/env /home/deploy/.rvm/gems/ruby-2.3.0/wrappers/jekyll build --destination public
+ DEBUG [985a0349] 	/usr/bin/env: 
+ DEBUG [985a0349] 	/home/deploy/.rvm/gems/ruby-2.3.0/wrappers/jekyll
+ DEBUG [985a0349] 	: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-22 22:44:03 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8397c37e] Running ~/.rvm/bin/rvm version as deploy@192.241.190.158
+ DEBUG [8397c37e] Command: ~/.rvm/bin/rvm version
+ DEBUG [8397c37e] 	rvm 1.27.0 (master) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [8397c37e] Finished in 1.797 seconds with exit status 0 (successful).
+ DEBUG [57048a20] Running ~/.rvm/bin/rvm current as deploy@192.241.190.158
+ DEBUG [57048a20] Command: ~/.rvm/bin/rvm current
+ DEBUG [57048a20] 	ruby-2.3.0
+ DEBUG [57048a20] Finished in 1.404 seconds with exit status 0 (successful).
+ DEBUG [098621d1] Running ~/.rvm/bin/rvm default do ruby --version as deploy@192.241.190.158
+ DEBUG [098621d1] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [098621d1] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [098621d1] Finished in 0.777 seconds with exit status 0 (successful).
+  INFO [d5de2a6b] Running /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/rvm1scripts/ as deploy@192.241.190.158
+ DEBUG [d5de2a6b] Command: /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/rvm1scripts/
+  INFO [d5de2a6b] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/calebsayre/.rvm/gems/ruby-2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/calebsayre/.rvm/gems/ruby-2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [df171b1a] Running /usr/bin/env chmod +x /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh as deploy@192.241.190.158
+ DEBUG [df171b1a] Command: /usr/bin/env chmod +x /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh
+  INFO [df171b1a] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [90ccfa75] Running /usr/bin/env mkdir -p /tmp as deploy@192.241.190.158
+ DEBUG [90ccfa75] Command: /usr/bin/env mkdir -p /tmp
+  INFO [90ccfa75] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh 0.0%
+  INFO Uploading /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh 100.0%
+  INFO [20d36433] Running /usr/bin/env chmod 700 /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh as deploy@192.241.190.158
+ DEBUG [20d36433] Command: /usr/bin/env chmod 700 /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh
+  INFO [20d36433] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [eed85ca6] Running /usr/bin/env git ls-remote --heads git@github.com:drsayre/calebsayre.xyz.git as deploy@192.241.190.158
+ DEBUG [eed85ca6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git ls-remote --heads git@github.com:drsayre/calebsayre.xyz.git )
+ DEBUG [eed85ca6] 	3ed97afd59a3d39b418fb62f04a67ff3f5508d6f	refs/heads/master
+  INFO [eed85ca6] Finished in 0.429 seconds with exit status 0 (successful).
+  INFO [9867135b] Running /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/shared /home/deploy/calebsayre.xyz/releases as deploy@192.241.190.158
+ DEBUG [9867135b] Command: /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/shared /home/deploy/calebsayre.xyz/releases
+  INFO [9867135b] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [fd370f8b] Running [ -f /home/deploy/calebsayre.xyz/current/REVISION ] as deploy@192.241.190.158
+ DEBUG [fd370f8b] Command: [ -f /home/deploy/calebsayre.xyz/current/REVISION ]
+ DEBUG [fd370f8b] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [741b903c] Running /usr/bin/env cat /home/deploy/calebsayre.xyz/current/REVISION 2>/dev/null as deploy@192.241.190.158
+ DEBUG [741b903c] Command: /usr/bin/env cat /home/deploy/calebsayre.xyz/current/REVISION 2>/dev/null
+ DEBUG [741b903c] 	3ed97afd59a3d39b418fb62f04a67ff3f5508d6f
+ DEBUG [741b903c] Finished in 0.106 seconds with exit status 0 (successful).
+ DEBUG [a395d7d8] Running [ -f /home/deploy/calebsayre.xyz/repo/HEAD ] as deploy@192.241.190.158
+ DEBUG [a395d7d8] Command: [ -f /home/deploy/calebsayre.xyz/repo/HEAD ]
+ DEBUG [a395d7d8] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/calebsayre.xyz/repo
+ DEBUG [74d58840] Running if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [74d58840] Command: if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [74d58840] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [9a69041e] Running /usr/bin/env git remote update --prune as deploy@192.241.190.158
+ DEBUG [9a69041e] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9a69041e] 	Fetching origin
+  INFO [9a69041e] Finished in 0.417 seconds with exit status 0 (successful).
+ DEBUG [e03aad00] Running if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [e03aad00] Command: if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [e03aad00] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [82a06e35] Running /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/releases/20160823024409 as deploy@192.241.190.158
+ DEBUG [82a06e35] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env mkdir -p /home/deploy/calebsayre.xyz/releases/20160823024409 )
+  INFO [82a06e35] Finished in 0.111 seconds with exit status 0 (successful).
+  INFO [ff64e46b] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/calebsayre.xyz/releases/20160823024409 as deploy@192.241.190.158
+ DEBUG [ff64e46b] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/calebsayre.xyz/releases/20160823024409 )
+  INFO [ff64e46b] Finished in 0.156 seconds with exit status 0 (successful).
+ DEBUG [67018f0f] Running if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [67018f0f] Command: if test ! -d /home/deploy/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [67018f0f] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [b1c96d95] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.241.190.158
+ DEBUG [b1c96d95] Command: cd /home/deploy/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b1c96d95] 	3ed97afd59a3d39b418fb62f04a67ff3f5508d6f
+ DEBUG [b1c96d95] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [261fe78f] Running if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024409; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024409'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [261fe78f] Command: if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024409; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024409'" 1>&2; false; fi
+ DEBUG [261fe78f] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [b1dbcc6c] Running /usr/bin/env echo "3ed97afd59a3d39b418fb62f04a67ff3f5508d6f" >> REVISION as deploy@192.241.190.158
+ DEBUG [b1dbcc6c] Command: cd /home/deploy/calebsayre.xyz/releases/20160823024409 && /usr/bin/env echo "3ed97afd59a3d39b418fb62f04a67ff3f5508d6f" >> REVISION
+  INFO [b1dbcc6c] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [1239d718] Running if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024409; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024409'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [1239d718] Command: if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024409; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024409'" 1>&2; false; fi
+ DEBUG [1239d718] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO [e65e7386] Running /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh . ~/.rvm/bin/rvm default do bundle install --path /home/deploy/calebsayre.xyz/shared/bundle --without development test --deployment --quiet as deploy@192.241.190.158
+ DEBUG [e65e7386] Command: cd /home/deploy/calebsayre.xyz/releases/20160823024409 && /home/deploy/calebsayre.xyz/rvm1scripts/rvm-auto.sh . ~/.rvm/bin/rvm default do bundle install --path /home/deploy/calebsayre.xyz/shared/bundle --without development test --deployment --quiet
+  INFO [e65e7386] Finished in 3.777 seconds with exit status 0 (successful).
+  INFO [16b56e7d] Running /usr/bin/env ln -s /home/deploy/calebsayre.xyz/releases/20160823024409 /home/deploy/calebsayre.xyz/releases/current as deploy@192.241.190.158
+ DEBUG [16b56e7d] Command: /usr/bin/env ln -s /home/deploy/calebsayre.xyz/releases/20160823024409 /home/deploy/calebsayre.xyz/releases/current
+  INFO [16b56e7d] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [13e4b8b7] Running /usr/bin/env mv /home/deploy/calebsayre.xyz/releases/current /home/deploy/calebsayre.xyz as deploy@192.241.190.158
+ DEBUG [13e4b8b7] Command: /usr/bin/env mv /home/deploy/calebsayre.xyz/releases/current /home/deploy/calebsayre.xyz
+  INFO [13e4b8b7] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [0b1bd28b] Running if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024409; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024409'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [0b1bd28b] Command: if test ! -d /home/deploy/calebsayre.xyz/releases/20160823024409; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases/20160823024409'" 1>&2; false; fi
+ DEBUG [0b1bd28b] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [95225d77] Running /usr/bin/env /home/deploy/.rvm/gems/ruby-2.3.0/wrappers/jekyll build --destination public as deploy@192.241.190.158
+ DEBUG [95225d77] Command: cd /home/deploy/calebsayre.xyz/releases/20160823024409 && /usr/bin/env /home/deploy/.rvm/gems/ruby-2.3.0/wrappers/jekyll build --destination public
+ DEBUG [95225d77] 	Configuration file: /home/deploy/calebsayre.xyz/releases/20160823024409/_config.yml
+ DEBUG [95225d77] 	
+ DEBUG [95225d77] 	            Source: /home/deploy/calebsayre.xyz/releases/20160823024409
+ DEBUG [95225d77] 	
+ DEBUG [95225d77] 	       Destination: public
+ DEBUG [95225d77] 	
+ DEBUG [95225d77] 	 Incremental build: disabled. Enable with --incremental
+ DEBUG [95225d77] 	
+ DEBUG [95225d77] 	      Generating... 
+ DEBUG [95225d77] 	
+ DEBUG [95225d77] 	                    done in 1.135 seconds.
+ DEBUG [95225d77] 	
+ DEBUG [95225d77] 	 Auto-regeneration: disabled. Use --watch to enable.
+ DEBUG [95225d77] 	
+  INFO [95225d77] Finished in 3.054 seconds with exit status 0 (successful).
+ DEBUG [a9464add] Running /usr/bin/env ls -xtr /home/deploy/calebsayre.xyz/releases as deploy@192.241.190.158
+ DEBUG [a9464add] Command: /usr/bin/env ls -xtr /home/deploy/calebsayre.xyz/releases
+ DEBUG [a9464add] 	20160823024029	20160823024409
+ DEBUG [a9464add] Finished in 0.125 seconds with exit status 0 (successful).
+ DEBUG [76bcbdd1] Running if test ! -d /home/deploy/calebsayre.xyz/releases; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [76bcbdd1] Command: if test ! -d /home/deploy/calebsayre.xyz/releases; then echo "Directory does not exist '/home/deploy/calebsayre.xyz/releases'" 1>&2; false; fi
+ DEBUG [76bcbdd1] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [0cdf3aad] Running /usr/bin/env echo "Branch master (at 3ed97afd59a3d39b418fb62f04a67ff3f5508d6f) deployed as release 20160823024409 by calebsayre" >> /home/deploy/calebsayre.xyz/revisions.log as deploy@192.241.190.158
+ DEBUG [0cdf3aad] Command: cd /home/deploy/calebsayre.xyz/releases && /usr/bin/env echo "Branch master (at 3ed97afd59a3d39b418fb62f04a67ff3f5508d6f) deployed as release 20160823024409 by calebsayre" >> /home/deploy/calebsayre.xyz/revisions.log
+  INFO [0cdf3aad] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-22 22:49:04 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e1c6115b] Running ~/.rvm/bin/rvm version as deploy@192.241.190.158
+ DEBUG [e1c6115b] Command: ~/.rvm/bin/rvm version
+ DEBUG [e1c6115b] 	rvm 1.27.0 (master) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [e1c6115b] Finished in 1.387 seconds with exit status 0 (successful).
+ DEBUG [a3492289] Running ~/.rvm/bin/rvm current as deploy@192.241.190.158
+ DEBUG [a3492289] Command: ~/.rvm/bin/rvm current
+ DEBUG [a3492289] 	ruby-2.3.0
+ DEBUG [a3492289] Finished in 1.225 seconds with exit status 0 (successful).
+ DEBUG [d7152b81] Running ~/.rvm/bin/rvm default do ruby --version as deploy@192.241.190.158
+ DEBUG [d7152b81] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [d7152b81] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [d7152b81] Finished in 0.473 seconds with exit status 0 (successful).
+  INFO [c26225ac] Running /usr/bin/env mkdir -p /home/deploy/apps/calebsayre.xyz/rvm1scripts/ as deploy@192.241.190.158
+ DEBUG [c26225ac] Command: /usr/bin/env mkdir -p /home/deploy/apps/calebsayre.xyz/rvm1scripts/
+  INFO [c26225ac] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/calebsayre/.rvm/gems/ruby-2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/calebsayre/.rvm/gems/ruby-2.3.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [d6f4303c] Running /usr/bin/env chmod +x /home/deploy/apps/calebsayre.xyz/rvm1scripts/rvm-auto.sh as deploy@192.241.190.158
+ DEBUG [d6f4303c] Command: /usr/bin/env chmod +x /home/deploy/apps/calebsayre.xyz/rvm1scripts/rvm-auto.sh
+  INFO [d6f4303c] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [a11c5f30] Running /usr/bin/env mkdir -p /tmp as deploy@192.241.190.158
+ DEBUG [a11c5f30] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a11c5f30] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh 0.0%
+  INFO Uploading /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh 100.0%
+  INFO [785847b3] Running /usr/bin/env chmod 700 /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh as deploy@192.241.190.158
+ DEBUG [785847b3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh
+  INFO [785847b3] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [8e4339c7] Running /usr/bin/env git ls-remote --heads git@github.com:DrSayre/calebsayre.xyz.git as deploy@192.241.190.158
+ DEBUG [8e4339c7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git ls-remote --heads git@github.com:DrSayre/calebsayre.xyz.git )
+ DEBUG [8e4339c7] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+ DEBUG [8e4339c7] 	4e71d0550867153d116977d1589f3cf7592877af	refs/heads/master
+  INFO [8e4339c7] Finished in 0.383 seconds with exit status 0 (successful).
+  INFO [48c4ea43] Running /usr/bin/env mkdir -p /home/deploy/apps/calebsayre.xyz/shared /home/deploy/apps/calebsayre.xyz/releases as deploy@192.241.190.158
+ DEBUG [48c4ea43] Command: /usr/bin/env mkdir -p /home/deploy/apps/calebsayre.xyz/shared /home/deploy/apps/calebsayre.xyz/releases
+  INFO [48c4ea43] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [e9d0c9ed] Running [ -f /home/deploy/apps/calebsayre.xyz/current/REVISION ] as deploy@192.241.190.158
+ DEBUG [e9d0c9ed] Command: [ -f /home/deploy/apps/calebsayre.xyz/current/REVISION ]
+ DEBUG [e9d0c9ed] Finished in 0.098 seconds with exit status 1 (failed).
+ DEBUG [b229a7bd] Running [ -f /home/deploy/apps/calebsayre.xyz/repo/HEAD ] as deploy@192.241.190.158
+ DEBUG [b229a7bd] Command: [ -f /home/deploy/apps/calebsayre.xyz/repo/HEAD ]
+ DEBUG [b229a7bd] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [7460350e] Running if test ! -d /home/deploy/apps/calebsayre.xyz; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [7460350e] Command: if test ! -d /home/deploy/apps/calebsayre.xyz; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz'" 1>&2; false; fi
+ DEBUG [7460350e] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [f4a5d3a1] Running /usr/bin/env git clone --mirror git@github.com:DrSayre/calebsayre.xyz.git /home/deploy/apps/calebsayre.xyz/repo as deploy@192.241.190.158
+ DEBUG [f4a5d3a1] Command: cd /home/deploy/apps/calebsayre.xyz && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git clone --mirror git@github.com:DrSayre/calebsayre.xyz.git /home/deploy/apps/calebsayre.xyz/repo )
+ DEBUG [f4a5d3a1] 	Cloning into bare repository '/home/deploy/apps/calebsayre.xyz/repo'...
+  INFO [f4a5d3a1] Finished in 0.447 seconds with exit status 0 (successful).
+ DEBUG [51ec77d2] Running if test ! -d /home/deploy/apps/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [51ec77d2] Command: if test ! -d /home/deploy/apps/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [51ec77d2] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [626882c0] Running /usr/bin/env git remote update --prune as deploy@192.241.190.158
+ DEBUG [626882c0] Command: cd /home/deploy/apps/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [626882c0] 	Fetching origin
+  INFO [626882c0] Finished in 0.393 seconds with exit status 0 (successful).
+ DEBUG [23f69461] Running if test ! -d /home/deploy/apps/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [23f69461] Command: if test ! -d /home/deploy/apps/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [23f69461] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [d4580ef6] Running /usr/bin/env mkdir -p /home/deploy/apps/calebsayre.xyz/releases/20160823024909 as deploy@192.241.190.158
+ DEBUG [d4580ef6] Command: cd /home/deploy/apps/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/calebsayre.xyz/releases/20160823024909 )
+  INFO [d4580ef6] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [89b472fe] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/apps/calebsayre.xyz/releases/20160823024909 as deploy@192.241.190.158
+ DEBUG [89b472fe] Command: cd /home/deploy/apps/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/apps/calebsayre.xyz/releases/20160823024909 )
+  INFO [89b472fe] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [b195af9c] Running if test ! -d /home/deploy/apps/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/repo'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [b195af9c] Command: if test ! -d /home/deploy/apps/calebsayre.xyz/repo; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/repo'" 1>&2; false; fi
+ DEBUG [b195af9c] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [b2e11d65] Running /usr/bin/env git rev-list --max-count=1 master as deploy@192.241.190.158
+ DEBUG [b2e11d65] Command: cd /home/deploy/apps/calebsayre.xyz/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-calebsayre.xyz-production-calebsayre.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b2e11d65] 	4e71d0550867153d116977d1589f3cf7592877af
+ DEBUG [b2e11d65] Finished in 0.103 seconds with exit status 0 (successful).
+ DEBUG [3a425ffa] Running if test ! -d /home/deploy/apps/calebsayre.xyz/releases/20160823024909; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases/20160823024909'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [3a425ffa] Command: if test ! -d /home/deploy/apps/calebsayre.xyz/releases/20160823024909; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases/20160823024909'" 1>&2; false; fi
+ DEBUG [3a425ffa] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [64599524] Running /usr/bin/env echo "4e71d0550867153d116977d1589f3cf7592877af" >> REVISION as deploy@192.241.190.158
+ DEBUG [64599524] Command: cd /home/deploy/apps/calebsayre.xyz/releases/20160823024909 && /usr/bin/env echo "4e71d0550867153d116977d1589f3cf7592877af" >> REVISION
+  INFO [64599524] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG [2fb61ae5] Running if test ! -d /home/deploy/apps/calebsayre.xyz/releases/20160823024909; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases/20160823024909'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [2fb61ae5] Command: if test ! -d /home/deploy/apps/calebsayre.xyz/releases/20160823024909; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases/20160823024909'" 1>&2; false; fi
+ DEBUG [2fb61ae5] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [b4de3c7b] Running /home/deploy/apps/calebsayre.xyz/rvm1scripts/rvm-auto.sh . ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/calebsayre.xyz/shared/bundle --without development test --deployment --quiet as deploy@192.241.190.158
+ DEBUG [b4de3c7b] Command: cd /home/deploy/apps/calebsayre.xyz/releases/20160823024909 && /home/deploy/apps/calebsayre.xyz/rvm1scripts/rvm-auto.sh . ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/calebsayre.xyz/shared/bundle --without development test --deployment --quiet
+  INFO [b4de3c7b] Finished in 27.002 seconds with exit status 0 (successful).
+  INFO [11f9b860] Running /usr/bin/env ln -s /home/deploy/apps/calebsayre.xyz/releases/20160823024909 /home/deploy/apps/calebsayre.xyz/releases/current as deploy@192.241.190.158
+ DEBUG [11f9b860] Command: /usr/bin/env ln -s /home/deploy/apps/calebsayre.xyz/releases/20160823024909 /home/deploy/apps/calebsayre.xyz/releases/current
+  INFO [11f9b860] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [74fabb0a] Running /usr/bin/env mv /home/deploy/apps/calebsayre.xyz/releases/current /home/deploy/apps/calebsayre.xyz as deploy@192.241.190.158
+ DEBUG [74fabb0a] Command: /usr/bin/env mv /home/deploy/apps/calebsayre.xyz/releases/current /home/deploy/apps/calebsayre.xyz
+  INFO [74fabb0a] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [57decd86] Running if test ! -d /home/deploy/apps/calebsayre.xyz/releases/20160823024909; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases/20160823024909'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [57decd86] Command: if test ! -d /home/deploy/apps/calebsayre.xyz/releases/20160823024909; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases/20160823024909'" 1>&2; false; fi
+ DEBUG [57decd86] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [76ae823d] Running /usr/bin/env /home/deploy/.rvm/gems/ruby-2.3.0/wrappers/jekyll build --destination public as deploy@192.241.190.158
+ DEBUG [76ae823d] Command: cd /home/deploy/apps/calebsayre.xyz/releases/20160823024909 && /usr/bin/env /home/deploy/.rvm/gems/ruby-2.3.0/wrappers/jekyll build --destination public
+ DEBUG [76ae823d] 	Configuration file: /home/deploy/apps/calebsayre.xyz/releases/20160823024909/_config.yml
+ DEBUG [76ae823d] 	
+ DEBUG [76ae823d] 	            Source: /home/deploy/apps/calebsayre.xyz/releases/20160823024909
+ DEBUG [76ae823d] 	
+ DEBUG [76ae823d] 	       Destination: public
+ DEBUG [76ae823d] 	
+ DEBUG [76ae823d] 	 Incremental build: disabled. Enable with --incremental
+ DEBUG [76ae823d] 	
+ DEBUG [76ae823d] 	      Generating... 
+ DEBUG [76ae823d] 	
+ DEBUG [76ae823d] 	                    done in 0.524 seconds.
+ DEBUG [76ae823d] 	
+ DEBUG [76ae823d] 	 Auto-regeneration: disabled. Use --watch to enable.
+ DEBUG [76ae823d] 	
+  INFO [76ae823d] Finished in 1.526 seconds with exit status 0 (successful).
+ DEBUG [78ecb1e2] Running /usr/bin/env ls -xtr /home/deploy/apps/calebsayre.xyz/releases as deploy@192.241.190.158
+ DEBUG [78ecb1e2] Command: /usr/bin/env ls -xtr /home/deploy/apps/calebsayre.xyz/releases
+ DEBUG [78ecb1e2] 	20160823024909
+ DEBUG [78ecb1e2] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [1b0b1f92] Running if test ! -d /home/deploy/apps/calebsayre.xyz/releases; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases'" 1>&2; false; fi as deploy@192.241.190.158
+ DEBUG [1b0b1f92] Command: if test ! -d /home/deploy/apps/calebsayre.xyz/releases; then echo "Directory does not exist '/home/deploy/apps/calebsayre.xyz/releases'" 1>&2; false; fi
+ DEBUG [1b0b1f92] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [99017eac] Running /usr/bin/env echo "Branch master (at 4e71d0550867153d116977d1589f3cf7592877af) deployed as release 20160823024909 by calebsayre" >> /home/deploy/apps/calebsayre.xyz/revisions.log as deploy@192.241.190.158
+ DEBUG [99017eac] Command: cd /home/deploy/apps/calebsayre.xyz/releases && /usr/bin/env echo "Branch master (at 4e71d0550867153d116977d1589f3cf7592877af) deployed as release 20160823024909 by calebsayre" >> /home/deploy/apps/calebsayre.xyz/revisions.log
+  INFO [99017eac] Finished in 0.110 seconds with exit status 0 (successful).
