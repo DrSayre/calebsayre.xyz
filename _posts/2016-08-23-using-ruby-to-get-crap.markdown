@@ -51,3 +51,7 @@ By trying at a non-peek hour, I was finally able to get a bag of crap. So here i
 * Mystery bag
 * 9-in-1 Key Ring Tool
 * Some kind of Shirt Woot comic book
+
+{% if site.disqus_shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
