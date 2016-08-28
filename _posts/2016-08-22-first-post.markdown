@@ -12,7 +12,3 @@ I have no idea.
 
 ## How is this different from Live Journal in 2003?
 Hmmm... Good question...
-
-{% if site.disqus_shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
